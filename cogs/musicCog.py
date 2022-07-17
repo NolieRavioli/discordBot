@@ -38,7 +38,6 @@ class VoiceConnectionError(commands.CommandError):
 class InvalidVoiceChannel(VoiceConnectionError):
     """Exception for cases of invalid Voice Channels."""
 
-
 class YTDLSource(discord.PCMVolumeTransformer):
     def __init__(self, source, *, data, requester):
         super().__init__(source)
@@ -77,7 +76,6 @@ class YTDLSource(discord.PCMVolumeTransformer):
         to_run = partial(ytdl.extract_info, url=data['webpage_url'], download=False)
         data = await loop.run_in_executor(None, to_run)
         return cls(discord.FFmpegPCMAudio(data['url']), data=data, requester=requester)
-
 
 class MusicPlayer:
     """Makes music player in each guild 
