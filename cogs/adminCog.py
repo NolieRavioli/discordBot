@@ -5,7 +5,6 @@ import sys
 import traceback
 import random
 from typing import Optional
-
 class Admin(commands.Cog):
     """Admin related commands."""
     __slots__ = ('bot')

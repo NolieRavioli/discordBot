@@ -60,9 +60,11 @@ for extention in extensions:
     bot.load_extension(extention)
 @bot.event
 async def on_ready():
-    print(f'Logged in as: {bot.user.name}({bot.user.id}) in:')
-    for guild in bot.guilds:
-        print(f'{guild}: {guild.member_count} members')
+  publicip = get('https://api.ipify.org').content.decode('utf8')
+  print('My public IP address is: {}'.format(publicip))
+  print(f'Logged in as: {bot.user.name}({bot.user.id}) in:')
+  for guild in bot.guilds:
+    print(f'{guild}: {guild.member_count} members')
 projectPath = os.path.dirname(os.path.realpath(__file__))
 if os.path.exists(os.path.join(projectPath,".env")):
   with open(os.path.join(projectPath,".env"),'r') as f:

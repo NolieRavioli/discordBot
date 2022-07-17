@@ -12,8 +12,6 @@ import random
 from typing import Optional
 youtube_dl.utils.bug_reports_message = lambda: ''
 from requests import get
-publicip = get('https://api.ipify.org').content.decode('utf8')
-print('My public IP address is: {}'.format(publicip))
 # ------Bot Options----------------------------------------------------------
 ytdlopts = {
     'format': 'bestaudio/best',
