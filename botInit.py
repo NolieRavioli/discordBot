@@ -10,6 +10,9 @@
 # version ='1.0'
 # ---------------------------------------------------------------------------
 #     Just a lil bot i wanted to make for my discord servers.
+#     Special thanks to https://stackoverflow.com/users/14940355/aditya-tomar
+#     for https://stackoverflow.com/a/66669004. helped w/ ytdl streaming!
+#     https://github.com/Rapptz/discord.py/blob/master/examples/basic_voice.py
 # ---------------------------------------------------------------------------
 #     Module check (hopefully this is correct, idk for sure)
 import os
